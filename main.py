@@ -35,7 +35,7 @@ def candidate_skill_page(skill_name):
     """Страница найденных кандидатов по навыкам"""
     candidates = utils.load_candidates_from_json("candidates.json")
     candidates_founded = utils.get_candidates_by_skill(candidates, skill_name)
-    return render_template("search.html", candidates=candidates_founded, skill_name=skill_name)
+    return render_template("skill.html", candidates=candidates_founded, skill_name=skill_name)
 
 
 app.run()
